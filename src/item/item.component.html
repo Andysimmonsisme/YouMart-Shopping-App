@@ -1,3 +1,6 @@
-<p>
-item works!
-</p>
+<div class="item-container">
+  <div class="item-details">{{ name }} {{ price | currency }}</div>
+  <button class="btn" (click)="decreaseQuantity()">-</button
+  ><input type="number" [(ngModel)]="quantity" (keypress)="isNumber($event)" />
+  <button class="btn" (click)="increaseQuantity()">+</button>
+</div>

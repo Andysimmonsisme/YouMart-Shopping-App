@@ -1,0 +1,48 @@
+.btn,
+.btn:focus {
+  background-color: #ffd667;
+  border: #000 1px solid;
+  color: black;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #c5a242;
+}
+
+.btn:active {
+  color: #000;
+  background-color: #c5a242;
+  border-color: var(--bs-btn-hover-border-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(214, 214, 214, 0.5);
+}
+
+input {
+  width: 30px;
+  text-align: center;
+  height: 34px;
+  margin: 0 2px;
+  border-radius: 0.375rem;
+  border-width: 1px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.item-container {
+  padding: 15px;
+}
+
+.item-details {
+  padding: 5px;
+}
