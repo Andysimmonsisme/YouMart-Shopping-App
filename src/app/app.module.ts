@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BagComponent } from '../bag/bag.component';
 import { CartComponent } from '../cart/cart.component';
+import { CartService } from '../cart/cart.service';
 import { CategoryComponent } from '../category/category.component';
 import { HeaderComponent } from '../header/header.component';
 import { ItemComponent } from '../item/item.component';
@@ -21,6 +22,7 @@ import { ItemListComponent } from '../item-list/item-list.component';
     ItemComponent,
     ItemListComponent,
   ],
+  providers: [CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

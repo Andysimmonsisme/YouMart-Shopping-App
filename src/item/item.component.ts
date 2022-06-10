@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
+import { CartService } from '../cart/cart.service';
 
 @Component({
   selector: 'item',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input, Output } from '@angular/core';
   styleUrls: ['./item.component.css'],
 })
 export class ItemComponent implements OnInit {
-  constructor() {}
+  constructor(private cartService: CartService) {}
 
   @Input() id: number;
   @Input() name: string;
@@ -14,7 +15,10 @@ export class ItemComponent implements OnInit {
   @Output() quantity: number = 0;
 
   increaseQuantity() {
-    this.quantity++;
+    if (this.quantity < 9) {
+      this.quantity++;
+      this.cartService.updateItemQuantity(this);
+    }
   }
 
   decreaseQuantity() {
@@ -29,6 +33,7 @@ export class ItemComponent implements OnInit {
       return false;
     }
     this.quantity = charCode - 48; //char codes 48-56 represent numbers 0-9
+    this.cartService.updateItemQuantity(this);
   }
 
   ngOnInit() {}

@@ -1,5 +1,12 @@
 <div class="item-container">
-  <div class="item-details">{{ name }} {{ price | currency }}</div>
+  <img
+    width="50"
+    src="https://www.canva.com/design/DAFDI1bQZP4/2K4iuwFuzP4Uq5QMEYbL9A/edit?utm_content=DAFDI1bQZP4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+  />
+  <div class="item-details">
+    {{ name }} <br />
+    {{ price | currency }}
+  </div>
   <button class="btn" (click)="decreaseQuantity()">-</button
   ><input type="number" [(ngModel)]="quantity" (keypress)="isNumber($event)" />
   <button class="btn" (click)="increaseQuantity()">+</button>
