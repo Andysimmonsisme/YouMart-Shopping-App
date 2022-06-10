@@ -1,0 +1,15 @@
+#cart-modal {
+  width: 100%;
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  height: 250px;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout-txt {
+    display: none;
+  }
+}

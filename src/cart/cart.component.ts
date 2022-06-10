@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BagComponent } from '../bag/bag.component';
+import { CartService } from './cart.service';
 
 @Component({
   selector: 'cart',
@@ -7,10 +8,14 @@ import { BagComponent } from '../bag/bag.component';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  constructor() {}
+  constructor(private cartService: CartService) {}
 
   total: number = 0;
   bags: Array<BagComponent>;
+
+  showCart() {
+    this.total = this.cartService.calculateTotal();
+  }
 
   ngOnInit() {}
 }
