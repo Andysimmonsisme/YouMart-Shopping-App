@@ -1,0 +1,15 @@
+a {
+  padding: 10px 15px;
+}
+
+a:hover,
+.active {
+  background-color: #00adb6;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  a {
+    display: block;
+  }
+}

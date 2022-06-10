@@ -11,5 +11,15 @@ h1 {
 button {
   width: fit-content;
   position: absolute;
-  right: 5px;
+  left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  .checkout-txt {
+    display: none;
+  }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryComponent } from '../category/category.component';
+import { items } from '../item/items';
+import { categories } from '../category/categories';
 
 @Component({
   selector: 'item-list',
@@ -8,7 +11,17 @@ import { Component, OnInit } from '@angular/core';
 export class ItemListComponent implements OnInit {
   constructor() {}
 
-  items = ['Apple', 'Banana', 'Orange'];
+  items = items;
+  categories = categories;
+  activeCategory = 1;
 
-  ngOnInit() {}
+  addItemsToCategories() {
+    this.categories.forEach((cat) => {
+      cat.items = items[cat.id];
+    });
+  }
+
+  ngOnInit() {
+    this.addItemsToCategories();
+  }
 }
