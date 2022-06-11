@@ -13,7 +13,8 @@ export const items = {
       id: 1,
       name: 'Apple',
       price: 0.5,
-      imgUrl: '../../assets/img/apples.png',
+      imgUrl:
+        'https://github.com/Andysimmonsisme/YouMart-Shopping-App/blob/master/src/assets/img/Apples.png?raw=true',
     },
     {
       id: 2,
