@@ -28,13 +28,21 @@ export class CartComponent implements OnInit {
   }
 
   checkout() {
-    alert("This one's on us! Thanks for shopping!");
-    this.clearCart();
+    if (this.cartService.calculateTotal() > 0) {
+      alert("This one's on us! Thanks for shopping!");
+      this.clearCart();
+    } else {
+      alert('Your cart is empty!');
+    }
   }
 
   clearCart() {
-    this.cartService.clearCart();
-    this.closeCart();
+    if (this.cartService.calculateTotal() > 0) {
+      this.cartService.clearCart();
+      this.closeCart();
+    } else {
+      alert('Your cart is empty!');
+    }
   }
 
   ngOnInit() {
