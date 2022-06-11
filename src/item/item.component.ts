@@ -12,6 +12,7 @@ export class ItemComponent implements OnInit {
   @Input() id: number;
   @Input() name: string;
   @Input() price: number;
+  @Input() imgUrl: string;
   @Output() quantity: number = 0;
 
   increaseQuantity() {
