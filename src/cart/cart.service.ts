@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Item } from '../item/items';
 
 @Injectable({
@@ -8,6 +8,8 @@ export class CartService {
   constructor() {}
 
   items = {};
+
+  cartCleared = new EventEmitter<boolean>();
 
   updateItemQuantity(item) {
     if (item.quantity > 0) {
@@ -24,5 +26,20 @@ export class CartService {
       total += item.price * item.quantity;
     });
     return total;
+  }
+
+  getItems() {
+    let itemsArr = [];
+
+    Object.keys(this.items).forEach((k) => {
+      itemsArr.push(this.items[k]);
+    });
+    console.log(itemsArr);
+    return itemsArr;
+  }
+
+  clearCart() {
+    this.items = {};
+    this.cartCleared.emit(true);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CategoryComponent } from '../category/category.component';
 import { items } from '../item/items';
 import { categories } from '../category/categories';
@@ -18,6 +18,14 @@ export class ItemListComponent implements OnInit {
   addItemsToCategories() {
     this.categories.forEach((cat) => {
       cat.items = items[cat.id];
+    });
+  }
+
+  clearQuantities() {
+    this.categories.forEach((cat) => {
+      cat.items.forEach((item) => {
+        item.quantity = 0;
+      });
     });
   }
 

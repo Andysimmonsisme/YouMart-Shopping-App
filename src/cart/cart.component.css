@@ -1,11 +1,86 @@
-#cart-modal {
+#cart-modal-bg {
   width: 100%;
-  position: absolute;
-  top: 250px;
-  left: 250px;
-  height: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: black;
-  color: white;
+  opacity: 0.5;
+}
+
+#cart-modal {
+  background-color: #fff;
+  width: 75%;
+  left: 12.5%;
+  padding: 15px;
+  opacity: 1;
+  margin: auto;
+  position: fixed;
+  border-radius: 0.375rem;
+}
+
+button.close,
+.checkout-btn {
+  position: absolute;
+}
+
+button.close,
+.yellow-btn {
+  border: none;
+  background-color: #ffd359;
+  color: #000;
+}
+
+button.close {
+  top: 5px;
+  left: 5px;
+}
+
+.checkout-btn {
+  right: 5px;
+  bottom: 5px;
+}
+
+button.close:hover,
+.yellow-btn:hover {
+  cursor: pointer;
+  background-color: #c5a242;
+}
+
+.yellow-btn:active {
+  color: #000;
+  background-color: #c5a242;
+  border-color: var(--bs-btn-hover-border-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(214, 214, 214, 0.5);
+}
+
+div {
+  display: block;
+}
+
+li {
+  display: block;
+}
+
+.modal-text {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  max-height: 350px;
+  overflow: scroll;
+  margin-bottom: 35px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 @media only screen and (max-width: 768px) {

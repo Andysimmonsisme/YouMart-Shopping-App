@@ -36,5 +36,9 @@ export class ItemComponent implements OnInit {
     this.cartService.updateItemQuantity(this);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.cartService.cartCleared.subscribe((cleared) => {
+      if (cleared) this.quantity = 0;
+    });
+  }
 }

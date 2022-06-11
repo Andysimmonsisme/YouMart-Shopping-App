@@ -103,3 +103,7 @@ svg.bi.bi-cart {
   vertical-align: -0.125em;
   fill: currentcolor;
 }
+
+.hide {
+  display: none !important;
+}

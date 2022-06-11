@@ -14,4 +14,26 @@
   </svg>
   <span class="checkout-txt">Checkout</span>
 </button>
-<div id="cart-modal">{{ total }}</div>
+<div id="cart-modal-bg"></div>
+<div id="cart-modal">
+  <button class="btn close" (click)="closeCart()">X</button>
+  <div class="modal-text">
+    <div><strong>Items</strong></div>
+    <hr />
+    <br />
+    <ul>
+      <li *ngFor="let item of items">
+        {{ item.name }} x {{ item.quantity }}
+        {{ item.price * item.quantity | currency }}
+      </li>
+      <br />
+      <hr />
+      <li>
+        <strong>Total: {{ total | currency }}</strong>
+      </li>
+    </ul>
+  </div>
+  <button class="btn yellow-btn checkout-btn" (click)="checkout()">
+    Checkout
+  </button>
+</div>
