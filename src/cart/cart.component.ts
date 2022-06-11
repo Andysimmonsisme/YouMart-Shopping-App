@@ -29,6 +29,10 @@ export class CartComponent implements OnInit {
 
   checkout() {
     alert("This one's on us! Thanks for shopping!");
+    this.clearCart();
+  }
+
+  clearCart() {
     this.cartService.clearCart();
     this.closeCart();
   }

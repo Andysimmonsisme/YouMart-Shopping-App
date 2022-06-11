@@ -20,7 +20,7 @@
 }
 
 button.close,
-.checkout-btn {
+.modal-footer-btns {
   position: absolute;
 }
 
@@ -36,7 +36,7 @@ button.close {
   left: 5px;
 }
 
-.checkout-btn {
+.modal-footer-btns {
   right: 5px;
   bottom: 5px;
 }
