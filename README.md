@@ -1,3 +1,5 @@
-# angular-ivy-zwhqfd
+# YouMart Shopping App
+An Angular based app that allows you to browse grocery items, add them to your cart, and see an overview of your cart with quantities and totals.
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-zwhqfd)
+## Live Demo
+https://angular-ivy-zwhqfd.stackblitz.io
